@@ -731,16 +731,35 @@
         }
 
         .exp-body.collapsed {
-            max-height: 140px;
+            max-height: 0;
         }
 
-        .exp-body.collapsed::after {
+        #acadBody.collapsed {
+            max-height: 200px;
+        }
+
+        #acadBody.collapsed::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             height: 60px;
+            background: linear-gradient(to bottom, transparent, var(--cream));
+            pointer-events: none;
+        }
+
+        .exp-fade {
+            position: relative;
+        }
+
+        .exp-fade::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
             background: linear-gradient(to bottom, transparent, var(--cream));
             pointer-events: none;
         }
@@ -754,13 +773,15 @@
             letter-spacing: .12em;
             text-transform: uppercase;
             cursor: pointer;
-            padding: .5rem 0;
+            padding: .5rem 1rem;
             margin-top: .6rem;
             text-decoration: underline;
             text-underline-offset: 3px;
             transition: color .3s;
-            grid-column: 2;
             display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         @media (max-width: 768px) {
@@ -2448,7 +2469,7 @@
                     <div class="sobre-head">
                         <p class="s-tag rv">Sobre Mim</p>
                         <h2 class="rv d1">Uma psicóloga que o/a guia para mudanças<br class="desktop-only"><br
-                                class="mobile-only">profundas com empatia e gentileza.</h2>
+                                class="mobile-only">profundas com empatia e acolhimento.</h2>
                     </div>
                     <p class="sobre-intro rv d2">Desde cedo que me fascina o ser humano — emoções, pensamentos,
                         comportamentos. A curiosidade levou-me a investir em diversas formações e a fazer a minha
@@ -2464,33 +2485,37 @@
                             <h4>Percurso<br>Académico</h4>
                         </div>
                         <div class="sobre-section-body">
-                            <p>O meu percurso começa muito antes da psicologia com uma licenciatura em português-alemão.
-                                A partir desse momento comecei a fazer yoga e com isso descobri o mundo do
-                                desenvolvimento pessoal em 1999. Fiz inúmeras formações alimentando o meu interesse e
-                                também fazendo o meu caminho.</p>
-                            <p>Mais tarde em 2018 termino a Licenciatura em Psicologia (Universidade Europeia) e em 2020
-                                o mestrado em Psicologia Clínica e do Aconselhamento (Universidade Autónoma de Lisboa).
-                                Nesse percurso fiz estágio observacional no Hospital Júlio de Matos e na Casa da
-                                Barragem.</p>
-                            <p>Fiz também formação em Hipnose Clínica com a Cristina Fernandes e a Fátima Diniz da
-                                Reconstruir, assim como a formação de formadores. O meu estágio académico foi nas Irmãs
-                                Hospitaleiras no centro de dia como terapia de grupo.</p>
-                            <p>O meu estágio profissional foi feito na Clínica Horizonte na área das dependências
-                                químicas e comportamentais, tendo feito na mesma altura formação pela CRIAP de adições
-                                químicas e comportamentais e na Wecareon (consultas online). O meu interesse pela área
-                                do trauma leva-me ao EMDR, tendo feito o nível 1 e 2, sendo registada na Associação EMDR
-                                Portugal nº 431.</p>
-                            <p>E como a psicologia é um mundo tão rico e a arte sempre me mostrou uma forma tão bonita
-                                de ampliarmos processos internos, fiz um mestrado em terapias psicoexpressivas pelo
-                                IASE, continuei no ISPA com as bases da dança terapia. Segui para o curso de dança
-                                expressiva e movimento consciente e danças circulares.</p>
+                            <div class="exp-body collapsed" id="acadBody">
+                                <p>O meu percurso começa muito antes da psicologia com uma licenciatura em
+                                    português-alemão. A partir desse momento comecei a fazer yoga e com isso descobri o
+                                    mundo do desenvolvimento pessoal em 1999. Fiz inúmeras formações alimentando o meu
+                                    interesse e também fazendo o meu caminho.</p>
+                                <p>Mais tarde em 2018 termino a Licenciatura em Psicologia (Universidade Europeia) e em
+                                    2020 o mestrado em Psicologia Clínica e do Aconselhamento (Universidade Autónoma de
+                                    Lisboa). Nesse percurso fiz estágio observacional no Hospital Júlio de Matos e na
+                                    Casa da Barragem.</p>
+                                <p>Fiz também formação em Hipnose Clínica com a Cristina Fernandes e a Fátima Diniz da
+                                    Reconstruir, assim como a formação de formadores. O meu estágio académico foi nas
+                                    Irmãs Hospitaleiras no centro de dia como terapia de grupo.</p>
+                                <p>O meu estágio profissional foi feito na Clínica Horizonte na área das dependências
+                                    químicas e comportamentais, tendo feito na mesma altura formação pela CRIAP de
+                                    adições químicas e comportamentais e na Wecareon (consultas online). O meu interesse
+                                    pela área do trauma leva-me ao EMDR, tendo feito o nível 1 e 2, sendo registada na
+                                    Associação EMDR Portugal nº 431.</p>
+                                <p>E como a psicologia é um mundo tão rico e a arte sempre me mostrou uma forma tão
+                                    bonita de ampliarmos processos internos, fiz um mestrado em terapias
+                                    psicoexpressivas pelo IASE, continuei no ISPA com as bases da dança terapia. Segui
+                                    para o curso de dança expressiva e movimento consciente e danças circulares.</p>
+                            </div>
+                            <div style="text-align:center;"><button class="exp-toggle" id="acadToggle"
+                                    onclick="toggleAcad()">Ver mais</button></div>
                         </div>
                     </div>
                     <div class="sobre-section rv">
                         <div class="sobre-section-label">
                             <h4>Experiência<br>Profissional</h4>
                         </div>
-                        <div class="sobre-section-body exp-body collapsed" id="expBody">
+                        <div class="sobre-section-body">
                             <p>O meu percurso profissional começou antes da psicologia, pois sou licenciada também em
                                 Línguas e Literaturas Modernas pela Universidade Nova de Lisboa. Trabalhei no gabinete
                                 de relações públicas no Ministério da Administração Interna, trabalhei como assistente
@@ -2499,28 +2524,31 @@
                                 Horizonte, uma comunidade terapêutica, e na Wecareon, uma plataforma de consultas
                                 online. Aqui aprendi a facilitar sessões de grupo regulares, palestras, e a fazer
                                 consultas online.</p>
-                            <p>Mantenho-me na Wecareon e na WOW facilitando consultas online e particulares. Trabalho na
-                                Fábrica Bordallo Pinheiro com consultas presenciais.</p>
-                            <p>Acredito num cuidado psicológico que reconhece a história única de cada pessoa e a forma
-                                como as experiências, sobretudo as traumáticas, moldam o corpo, a mente e a forma de
-                                estar no mundo. Trabalho com uma abordagem que integra EMDR, hipnose clínica e outras
-                                práticas contemporâneas, procurando ir às origens do trauma, onde a dor se instalou,
-                                para que a transformação possa acontecer de forma profunda e segura.</p>
-                            <p>O meu foco é apoiar cada pessoa no processo de integração — compreender o que viveu,
-                                ressignificar memórias difíceis e fortalecer recursos internos. Acredito que o
-                                autoconhecimento, aliado a uma relação terapêutica sólida, promove empoderamento,
-                                aumento da autoestima e a capacidade de construir um caminho de mudança consistente e
-                                alinhado com quem se é.</p>
-                            <p>Ao longo dos anos, desenvolvi uma prática clínica assente na escuta ativa, na presença,
-                                na empatia e no respeito. Esta experiência permite-me trabalhar com diferentes
-                                histórias, ritmos e necessidades, sempre com respeito pela individualidade de cada
-                                pessoa.</p>
-                            <p>Atualmente, realizo acompanhamento psicológico presencial nas Caldas da Rainha e
-                                consultas online, oferecendo um espaço seguro para quem procura compreender-se,
-                                recuperar-se e reencontrar direção. Para além disso, dou aulas de dança expressiva e
-                                movimento consciente.</p>
+                            <p class="exp-fade">Mantenho-me na Wecareon e na WOW facilitando consultas online a
+                                particulares e empresas. Trabalho na Fábrica Bordallo Pinheiro com consultas
+                                presenciais.</p>
+                            <div class="exp-body collapsed" id="expBody">
+                                <p>Acredito num cuidado psicológico que reconhece a história única de cada pessoa e a
+                                    forma como as experiências, sobretudo as traumáticas, moldam o corpo, a mente e a
+                                    forma de estar no mundo. Trabalho com uma abordagem que integra EMDR, hipnose
+                                    clínica e outras práticas contemporâneas, procurando ir às origens do trauma, onde a
+                                    dor se instalou, para que a transformação possa acontecer de forma profunda e
+                                    segura.</p>
+                                <p>O meu foco é apoiar cada pessoa no processo de integração — compreender o que viveu,
+                                    ressignificar memórias difíceis e fortalecer recursos internos. Acredito que o
+                                    autoconhecimento, aliado a uma relação terapêutica sólida, promove empoderamento,
+                                    aumento da autoestima e a capacidade de construir um caminho de mudança consistente
+                                    e alinhado com quem se é.</p>
+                                <p>Ao longo dos anos, desenvolvi uma prática clínica assente na escuta ativa, na
+                                    presença, na empatia e no respeito. Esta experiência permite-me trabalhar com
+                                    diferentes histórias, ritmos e necessidades, sempre com respeito pela
+                                    individualidade de cada pessoa.</p>
+                                <p>Atualmente realizo acompanhamento psicológico a particulares online e presencialmente
+                                    nas Caldas da Rainha.</p>
+                            </div>
+                            <div style="text-align:center;"><button class="exp-toggle" id="expToggle"
+                                    onclick="toggleExp()">Ver mais</button></div>
                         </div>
-                        <button class="exp-toggle" id="expToggle" onclick="toggleExp()">Ver mais</button>
                     </div>
                 </div>
             </div>
@@ -2537,20 +2565,35 @@
     <section id="abordagem" style="background:var(--cream2); scroll-margin-top:7rem;">
         <div class="section-inner">
             <div class="sobre-head rv">
-                <p class="s-tag">Abordagem Terapêutica</p>
                 <h2 class="rv d1" style="color:var(--forest);font-size:clamp(1.9rem,4vw,3.2rem);margin-bottom:.9rem;">
-                    EMDR & Hipnose Clínica</h2>
+                    Abordagem Terapêutica | EMDR & Hipnose Clínica</h2>
             </div>
             <div class="sobre-section rv">
                 <div class="sobre-section-label">
                     <h4>EMDR</h4>
                 </div>
                 <div class="sobre-section-body">
-                    <p>O EMDR (Dessensibilização e Reprocessamento através dos Movimentos Oculares) é uma abordagem psicoterapêutica desenvolvida por <span style="color:var(--forest)">Francine Shapiro</span>. É amplamente utilizada no tratamento de <span style="color:var(--forest)">traumas, experiências emocionalmente perturbadoras, ansiedade, fobias, depressão</span>, entre outras dificuldades psicológicas.</p>
-                    <p>O EMDR baseia-se na ideia de que algumas experiências difíceis ou traumáticas podem ficar <span style="color:var(--forest)">"presas" no sistema nervoso</span> sem serem adequadamente processadas. Quando isso acontece, as memórias permanecem associadas às emoções, sensações físicas e <span style="color:var(--forest)">crenças negativas</span> vividas no momento do acontecimento.</p>
-                    <p>O objetivo do EMDR é ajudar o cérebro a <span style="color:var(--forest)">reprocessar essas memórias</span>, reduzindo o <span style="color:var(--forest)">sofrimento emocional</span> associado e permitindo que a pessoa integre a experiência de forma mais adaptativa.</p>
-                    <p>Após o processamento de uma memória traumática, é frequente que a pessoa recorde o acontecimento sem a <span style="color:var(--forest)">intensidade emocional anterior</span>, desenvolva <span style="color:var(--forest)">crenças mais adaptativas</span> sobre si mesma, apresente menos sintomas de ansiedade ou stress e sinta maior <span style="color:var(--forest)">sensação de controlo e segurança</span>.</p>
-                    <p>Importa referir que o EMDR <span style="color:var(--forest)">não apaga memórias</span>. O que muda é a forma como essas memórias ficam armazenadas e o <span style="color:var(--forest)">impacto emocional</span> que exercem na vida da pessoa.</p>
+                    <p>O EMDR (Dessensibilização e Reprocessamento através dos Movimentos Oculares) é uma abordagem
+                        psicoterapêutica desenvolvida por <span style="color:var(--forest)">Francine Shapiro</span>. É
+                        amplamente utilizada no tratamento de <span style="color:var(--forest)">traumas, experiências
+                            emocionalmente perturbadoras, ansiedade, fobias, depressão</span>, entre outras dificuldades
+                        psicológicas.</p>
+                    <p>O EMDR baseia-se na ideia de que algumas experiências difíceis ou traumáticas podem ficar <span
+                            style="color:var(--forest)">"presas" no sistema nervoso</span> sem serem adequadamente
+                        processadas. Quando isso acontece, as memórias permanecem associadas às emoções, sensações
+                        físicas e <span style="color:var(--forest)">crenças negativas</span> vividas no momento do
+                        acontecimento.</p>
+                    <p>O objetivo do EMDR é ajudar o cérebro a <span style="color:var(--forest)">reprocessar essas
+                            memórias</span>, reduzindo o <span style="color:var(--forest)">sofrimento emocional</span>
+                        associado e permitindo que a pessoa integre a experiência de forma mais adaptativa.</p>
+                    <p>Após o processamento de uma memória traumática, é frequente que a pessoa recorde o acontecimento
+                        sem a <span style="color:var(--forest)">intensidade emocional anterior</span>, desenvolva <span
+                            style="color:var(--forest)">crenças mais adaptativas</span> sobre si mesma, apresente menos
+                        sintomas de ansiedade ou stress e sinta maior <span style="color:var(--forest)">sensação de
+                            controlo e segurança</span>.</p>
+                    <p>Importa referir que o EMDR <span style="color:var(--forest)">não apaga memórias</span>. O que
+                        muda é a forma como essas memórias ficam armazenadas e o <span
+                            style="color:var(--forest)">impacto emocional</span> que exercem na vida da pessoa.</p>
                 </div>
             </div>
             <div class="sobre-section rv">
@@ -2558,10 +2601,25 @@
                     <h4>Hipnose<br>Clínica</h4>
                 </div>
                 <div class="sobre-section-body">
-                    <p>Para além do EMDR também utilizo <span style="color:var(--forest)">Hipnose Clínica</span> nas minhas consultas, como uma <span style="color:var(--forest)">ferramenta complementar</span> ao acompanhamento terapêutico, sempre de forma personalizada e adaptada às necessidades de cada pessoa.</p>
-                    <p>A hipnose clínica é um <span style="color:var(--forest)">estado natural de concentração e foco profundo</span> que permite aceder a recursos internos, promover mudanças positivas e trabalhar questões <span style="color:var(--forest)">emocionais, comportamentais ou psicossomáticas</span> de forma mais eficaz. Durante o processo, a pessoa mantém-se <span style="color:var(--forest)">consciente, com controlo sobre si própria</span> e capaz de interromper a experiência a qualquer momento.</p>
-                    <p>Esta abordagem é útil no tratamento da <span style="color:var(--forest)">ansiedade, stress, fobias, depressão, traumas</span>, melhoria da autoestima, alteração de hábitos, entre outras questões. O objetivo é facilitar o <span style="color:var(--forest)">autoconhecimento</span>, reforçar <span style="color:var(--forest)">competências pessoais</span> e potenciar o <span style="color:var(--forest)">bem-estar físico e emocional</span>.</p>
-                    <p>A hipnose clínica é utilizada de forma <span style="color:var(--forest)">ética, segura e integrada</span> num plano terapêutico mais amplo, respeitando sempre os objetivos e o ritmo de cada cliente.</p>
+                    <p>Para além do EMDR também utilizo <span style="color:var(--forest)">Hipnose Clínica</span> nas
+                        minhas consultas, como uma <span style="color:var(--forest)">ferramenta complementar</span> ao
+                        acompanhamento terapêutico, sempre de forma personalizada e adaptada às necessidades de cada
+                        pessoa.</p>
+                    <p>A hipnose clínica é um <span style="color:var(--forest)">estado natural de concentração e foco
+                            profundo</span> que permite aceder a recursos internos, promover mudanças positivas e
+                        trabalhar questões <span style="color:var(--forest)">emocionais, comportamentais ou
+                            psicossomáticas</span> de forma mais eficaz. Durante o processo, a pessoa mantém-se <span
+                            style="color:var(--forest)">consciente, com controlo sobre si própria</span> e capaz de
+                        interromper a experiência a qualquer momento.</p>
+                    <p>Esta abordagem é útil no tratamento da <span style="color:var(--forest)">ansiedade, stress,
+                            fobias, depressão, traumas</span>, melhoria da autoestima, alteração de hábitos, entre
+                        outras questões. O objetivo é facilitar o <span
+                            style="color:var(--forest)">autoconhecimento</span>, reforçar <span
+                            style="color:var(--forest)">competências pessoais</span> e potenciar o <span
+                            style="color:var(--forest)">bem-estar físico e emocional</span>.</p>
+                    <p>A hipnose clínica é utilizada de forma <span style="color:var(--forest)">ética, segura e
+                            integrada</span> num plano terapêutico mais amplo, respeitando sempre os objetivos e o ritmo
+                        de cada cliente.</p>
                 </div>
             </div>
             <div class="sobre-section rv">
@@ -2580,11 +2638,13 @@
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-n">03</span>
-                            <p class="benefit-txt">Reconhecimento das habilidades, qualidades, limitações e maior auto-controlo.</p>
+                            <p class="benefit-txt">Reconhecimento das habilidades, qualidades, limitações e maior
+                                auto-controlo.</p>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-n">04</span>
-                            <p class="benefit-txt">Liberdade de expressão e ajuda a encontrar um sentido para a vida.</p>
+                            <p class="benefit-txt">Liberdade de expressão e ajuda a encontrar um sentido para a vida.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -2618,8 +2678,157 @@
                     </div>
                 </div>
             </div>
+            <div style="text-align:center; margin-top:5rem;">
+                <a href="#contacto" class="btn-p">Marcar Consulta</a>
+            </div>
         </div>
     </section>
+
+    <div class="wave-divider" style="background:var(--cream2)">
+        <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="40">
+            <path d="M0,20 C180,35 360,5 540,20 C720,35 900,5 1080,18 C1260,30 1380,12 1440,20 L1440,40 L0,40 Z"
+                fill="#faf3e8" />
+        </svg>
+    </div>
+
+    <!-- COMO FUNCIONAM AS CONSULTAS - VISÍVEL -->
+    <section id="consultas-psiafetiva" style="background:var(--cream); scroll-margin-top:7rem;">
+        <div class="section-inner">
+            <div class="abord-head">
+                <h2 class="rv d1">Como funcionam as consultas na <span style="color:var(--terra)">Psicologia Afetiva</span>?</h2>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+                <div class="rv" style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
+                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Plano Terapêutico Individualizado</h3>
+                    <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Após a entrevista clínica, estabelece-se um conjunto de objetivos terapêuticos totalmente adaptados ao que a pessoa precisa naquele momento da sua vida. O processo é sempre participativo: a pessoa envolve-se ativamente na compreensão das suas emoções, dos pensamentos que a influenciam e dos comportamentos que resultam desses padrões internos. Esta participação permite que desenvolva consciência, autonomia e capacidade de mudança. No final, o propósito é ampliar a funcionalidade emocional, promover bem-estar psicológico e contribuir para uma melhoria consistente da qualidade de vida.</p>
+                </div>
+                <div class="rv d1" style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
+                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Confidencialidade e Sigilo Profissional</h3>
+                    <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Compromisso com o sigilo profissional e proteção dos seus dados pessoais, assegurando confidencialidade. A relação clínica é construída de forma cuidadosa, baseada na confiança, na empatia e no respeito profundo pela individualidade de cada pessoa. Este vínculo cria um ambiente verdadeiramente seguro e acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada, validada e compreendida na sua totalidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider" style="background:var(--cream)">
+        <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="40">
+            <path d="M0,20 C180,35 360,5 540,20 C720,35 900,5 1080,18 C1260,30 1380,12 1440,20 L1440,40 L0,40 Z"
+                fill="#f0e4cc" />
+        </svg>
+    </div>
+
+    <!-- ÁREAS DE INTERVENÇÃO - VISÍVEL -->
+    <section id="areas-intervencao" style="background:var(--cream2); scroll-margin-top:7rem;">
+        <div class="section-inner">
+            <div class="serv-head">
+                <div>
+                    <h2 class="rv d1">Áreas de Intervenção</h2>
+                </div>
+            </div>
+            <div class="serv-blocks rv">
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Adições Químicas e Comportamentais</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Ansiedade</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Autoconhecimento e Desenvolvimento Pessoal</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Autoestima, Autoconfiança e Poder Pessoal</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Criança Interior</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Depressão</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>EMDR</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Fobias e Ataques de Pânico</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Hipnose Clínica</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Regulação Emocional</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="serv-block">
+                    <div class="serv-block-header">
+                        <div class="serv-block-header-left"><h3>Trauma</h3></div>
+                        <div class="serv-block-tog"></div>
+                    </div>
+                    <div class="serv-block-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <template>
         <!-- PSICOLOGIA -->
     </template>
@@ -2719,6 +2928,25 @@
                             terapêutica é construída com base na confiança, empatia e respeito, proporcionando um espaço
                             seguro, acolhedor e livre de julgamentos, onde se possa sentir ouvido/a e compreendido/a.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONAM AS CONSULTAS -->
+        <section id="consultas" style="scroll-margin-top:7rem;">
+            <div class="section-inner">
+                <div class="abord-head">
+                    <h2 class="rv d1">Como funcionam as consultas na <span style="color:var(--terra)">Psicologia Afetiva</span>?</h2>
+                </div>
+                <div class="pillars">
+                    <div class="pillar rv">
+                        <h3>Plano Terapêutico Individualizado</h3>
+                        <p>Após a entrevista clínica, estabelece-se um conjunto de objetivos terapêuticos totalmente adaptados ao que a pessoa precisa naquele momento da sua vida. O processo é sempre participativo: a pessoa envolve-se ativamente na compreensão das suas emoções, dos pensamentos que a influenciam e dos comportamentos que resultam desses padrões internos. Esta participação permite que desenvolva consciência, autonomia e capacidade de mudança. No final, o propósito é ampliar a funcionalidade emocional, promover bem-estar psicológico e contribuir para uma melhoria consistente da qualidade de vida.</p>
+                    </div>
+                    <div class="pillar rv d1">
+                        <h3>Confidencialidade e Sigilo Profissional</h3>
+                        <p>Compromisso com o sigilo profissional e proteção dos seus dados pessoais, assegurando confidencialidade. A relação clínica é construída de forma cuidadosa, baseada na confiança, na empatia e no respeito profundo pela individualidade de cada pessoa. Este vínculo cria um ambiente verdadeiramente seguro e acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada, validada e compreendida na sua totalidade.</p>
                     </div>
                 </div>
             </div>
@@ -2963,6 +3191,54 @@
                                 autoestima. O acompanhamento psicológico ajuda na integração da experiência traumática e
                                 na
                                 recuperação do equilíbrio emocional.</p>
+                        </div>
+                    </div>
+                    <div class="serv-block">
+                        <div class="serv-block-header">
+                            <div class="serv-block-header-left">
+                                <h3>Criança Interior</h3>
+                            </div>
+                            <div class="serv-block-tog"></div>
+                        </div>
+                        <div class="serv-block-body">
+                            <p>O trabalho com a <span style="color:var(--terra);font-weight:500">criança interior</span> consiste em reconhecer e integrar experiências emocionais da infância que continuam a influenciar a forma como sentimos, nos relacionamos e reagimos na vida adulta.</p>
+                            <p>Muitas dificuldades emocionais no presente — como o medo do abandono, a dificuldade em estabelecer limites ou a necessidade de aprovação — têm raízes em padrões aprendidos em fases precoces do desenvolvimento. Ao reconhecer e cuidar dessas partes internas, torna-se possível promover maior equilíbrio emocional, autocompaixão e liberdade interior.</p>
+                        </div>
+                    </div>
+                    <div class="serv-block">
+                        <div class="serv-block-header">
+                            <div class="serv-block-header-left">
+                                <h3>EMDR</h3>
+                            </div>
+                            <div class="serv-block-tog"></div>
+                        </div>
+                        <div class="serv-block-body">
+                            <p>O <span style="color:var(--terra);font-weight:500">EMDR</span> (Dessensibilização e Reprocessamento através dos Movimentos Oculares) é uma abordagem psicoterapêutica amplamente utilizada no tratamento de traumas, ansiedade, fobias e depressão, entre outras dificuldades psicológicas.</p>
+                            <p>Baseia-se na ideia de que algumas experiências difíceis podem ficar "presas" no sistema nervoso sem serem adequadamente processadas. O objetivo é ajudar o cérebro a reprocessar essas memórias, reduzindo o sofrimento emocional e permitindo que a pessoa integre a experiência de forma mais adaptativa.</p>
+                        </div>
+                    </div>
+                    <div class="serv-block">
+                        <div class="serv-block-header">
+                            <div class="serv-block-header-left">
+                                <h3>Fobias e Ataques de Pânico</h3>
+                            </div>
+                            <div class="serv-block-tog"></div>
+                        </div>
+                        <div class="serv-block-body">
+                            <p>As <span style="color:var(--terra);font-weight:500">fobias</span> são medos intensos e persistentes face a situações, objetos ou contextos específicos, que provocam evitamento e interferem significativamente na qualidade de vida. Os <span style="color:var(--terra);font-weight:500">ataques de pânico</span> caracterizam-se por episódios súbitos de medo intenso, acompanhados de sintomas físicos como palpitações, falta de ar, tontura e sensação de perda de controlo.</p>
+                            <p>O acompanhamento psicológico permite compreender as origens destes padrões, reduzir a intensidade das respostas de medo e desenvolver estratégias eficazes para retomar uma vida mais plena e sem limitações impostas pelo evitamento.</p>
+                        </div>
+                    </div>
+                    <div class="serv-block">
+                        <div class="serv-block-header">
+                            <div class="serv-block-header-left">
+                                <h3>Hipnose Clínica</h3>
+                            </div>
+                            <div class="serv-block-tog"></div>
+                        </div>
+                        <div class="serv-block-body">
+                            <p>A <span style="color:var(--terra);font-weight:500">hipnose clínica</span> é um estado natural de concentração e foco profundo que permite aceder a recursos internos e promover mudanças positivas a nível emocional, comportamental e psicossomático. Durante o processo, a pessoa mantém-se consciente e com controlo sobre si própria.</p>
+                            <p>É utilizada como ferramenta complementar ao acompanhamento terapêutico, de forma ética, segura e personalizada, sendo especialmente útil no tratamento da ansiedade, stress, fobias, depressão, traumas e na melhoria da autoestima.</p>
                         </div>
                     </div>
                     <div class="serv-block">
@@ -3452,6 +3728,19 @@
         }
         equalizePfSteps();
         window.addEventListener('resize', equalizePfSteps);
+
+        // Percurso Académico expandir/colapsar
+        function toggleAcad() {
+            const body = document.getElementById('acadBody');
+            const btn = document.getElementById('acadToggle');
+            const collapsed = body.classList.toggle('collapsed');
+            btn.textContent = collapsed ? 'Ver mais' : 'Ver menos';
+            if (collapsed) {
+                setTimeout(() => {
+                    body.closest('.sobre-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
 
         // Experiência expandir/colapsar
         function toggleExp() {

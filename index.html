@@ -4,35 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cátia Raposo | LoveMyself Project | Caldas da Rainha</title>
+    <title>Cátia Raposo | Psicologia Afetiva | Caldas da Rainha</title>
     <meta name="description"
-        content="Cátia Raposo, Psicóloga (C.P. 26955). Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, dança expressiva e movimento consciente.">
+        content="Cátia Raposo, Psicóloga (C.P. 26955). Psicologia Afetiva — acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, regulação emocional e trauma.">
     <link rel="icon" href="data:,">
 
     <!-- SEO -->
     <meta name="author" content="Cátia Raposo">
     <meta name="robots" content="index, follow">
     <meta name="keywords"
-        content="psicóloga Caldas da Rainha, psicologia afetiva, EMDR, hipnose clínica, dança expressiva, movimento consciente, trauma, consultas psicologia online, Cátia Raposo">
-    <meta name="geo.region" content="PT-10">
+        content="psicóloga Caldas da Rainha, Psicologia Afetiva, Cátia Raposo, EMDR, hipnose clínica, trauma, ansiedade, depressão, regulação emocional, consultas psicologia online, acompanhamento psicológico">
+    <meta name="geo.region" content="PT-11">
     <meta name="geo.placename" content="Caldas da Rainha, Portugal">
     <meta name="theme-color" content="#621708">
 
     <!-- Open Graph / Redes Sociais -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_PT">
-    <meta property="og:site_name" content="Cátia Raposo — LoveMyself Project">
-    <meta property="og:title" content="Cátia Raposo | LoveMyself Project | Caldas da Rainha">
+    <meta property="og:site_name" content="Cátia Raposo — Psicologia Afetiva">
+    <meta property="og:title" content="Cátia Raposo | Psicologia Afetiva | Caldas da Rainha">
     <meta property="og:description"
-        content="Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, dança expressiva e movimento consciente. Cátia Raposo, C.P. 26955.">
+        content="Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, regulação emocional e trauma. Cátia Raposo, C.P. 26955.">
     <meta property="og:image" content="fotografia_catia.jpg">
     <meta property="og:image:alt" content="Cátia Raposo — Psicóloga nas Caldas da Rainha">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cátia Raposo | LoveMyself Project | Caldas da Rainha">
+    <meta name="twitter:title" content="Cátia Raposo | Psicologia Afetiva | Caldas da Rainha">
     <meta name="twitter:description"
-        content="Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, dança expressiva e movimento consciente.">
+        content="Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, regulação emocional e trauma. Cátia Raposo, C.P. 26955.">
     <meta name="twitter:image" content="fotografia_catia.jpg">
     <meta name="twitter:image:alt" content="Cátia Raposo — Psicóloga nas Caldas da Rainha">
 
@@ -764,6 +764,10 @@
             pointer-events: none;
         }
 
+        .exp-fade.expanded::after {
+            display: none;
+        }
+
         .exp-toggle {
             background: none;
             border: none;
@@ -1170,7 +1174,7 @@
         @media (max-width: 768px) {
             .process-flow {
                 flex-direction: column;
-                gap: 0;
+                gap: 1.5rem;
             }
 
             .pf-step {
@@ -1630,7 +1634,7 @@
         }
 
         .foot-logo span {
-            color: var(--terra2);
+            color: #E8631A;
         }
 
         .foot-links {
@@ -1720,82 +1724,6 @@
             color: var(--terra);
         }
 
-        /* ── COOKIE BANNER ── */
-        #cookieBanner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 500;
-            background: var(--cream);
-            border-top: 1px solid var(--border);
-            padding: 1.2rem 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        #cookieBanner p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: .85rem;
-            color: var(--txt2);
-            line-height: 1.6;
-            margin: 0;
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .cookie-btns {
-            display: flex;
-            gap: .8rem;
-            flex-shrink: 0;
-        }
-
-        #cookieAccept {
-            padding: .6rem 1.4rem;
-            background: var(--forest);
-            color: var(--cream);
-            font-family: 'Montserrat', sans-serif;
-            font-size: .78rem;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            border: 1px solid var(--forest);
-            cursor: pointer;
-            transition: background .3s;
-        }
-
-        #cookieAccept:hover {
-            background: var(--terra);
-            border-color: var(--terra);
-        }
-
-        #cookieReject {
-            padding: .6rem 1.4rem;
-            background: transparent;
-            color: var(--forest);
-            font-family: 'Montserrat', sans-serif;
-            font-size: .78rem;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            border: 1px solid var(--forest);
-            cursor: pointer;
-            transition: all .3s;
-        }
-
-        #cookieReject:hover {
-            background: var(--forest);
-            color: var(--cream);
-        }
-
-        @media (max-width: 768px) {
-            #cookieBanner {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-        }
 
         /* ── DESTAQUES ── */
         [style*="color:var(--terra)"] {
@@ -1831,6 +1759,13 @@
         }
 
         /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .consultas-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+        }
+
         @media (max-width: 1024px) {
             .pillars {
                 grid-template-columns: 1fr;
@@ -2524,9 +2459,6 @@
                                 Horizonte, uma comunidade terapêutica, e na Wecareon, uma plataforma de consultas
                                 online. Aqui aprendi a facilitar sessões de grupo regulares, palestras, e a fazer
                                 consultas online.</p>
-                            <p class="exp-fade">Mantenho-me na Wecareon e na WOW facilitando consultas online a
-                                particulares e empresas. Trabalho na Fábrica Bordallo Pinheiro com consultas
-                                presenciais.</p>
                             <div class="exp-body collapsed" id="expBody">
                                 <p>Acredito num cuidado psicológico que reconhece a história única de cada pessoa e a
                                     forma como as experiências, sobretudo as traumáticas, moldam o corpo, a mente e a
@@ -2543,6 +2475,8 @@
                                     presença, na empatia e no respeito. Esta experiência permite-me trabalhar com
                                     diferentes histórias, ritmos e necessidades, sempre com respeito pela
                                     individualidade de cada pessoa.</p>
+                                <p>Mantenho-me na Wecareon e na WOW facilitando consultas online a particulares e
+                                    empresas. Trabalho na Fábrica Bordallo Pinheiro com consultas presenciais.</p>
                                 <p>Atualmente realizo acompanhamento psicológico a particulares online e presencialmente
                                     nas Caldas da Rainha.</p>
                             </div>
@@ -2574,26 +2508,26 @@
                 </div>
                 <div class="sobre-section-body">
                     <p>O EMDR (Dessensibilização e Reprocessamento através dos Movimentos Oculares) é uma abordagem
-                        psicoterapêutica desenvolvida por <span style="color:var(--forest)">Francine Shapiro</span>. É
-                        amplamente utilizada no tratamento de <span style="color:var(--forest)">traumas, experiências
+                        psicoterapêutica desenvolvida por <span style="color:var(--forest);font-weight:500">Francine Shapiro</span>. É
+                        amplamente utilizada no tratamento de <span style="color:var(--forest);font-weight:500">traumas, experiências
                             emocionalmente perturbadoras, ansiedade, fobias, depressão</span>, entre outras dificuldades
                         psicológicas.</p>
                     <p>O EMDR baseia-se na ideia de que algumas experiências difíceis ou traumáticas podem ficar <span
-                            style="color:var(--forest)">"presas" no sistema nervoso</span> sem serem adequadamente
+                            style="color:var(--forest);font-weight:500">"presas" no sistema nervoso</span> sem serem adequadamente
                         processadas. Quando isso acontece, as memórias permanecem associadas às emoções, sensações
-                        físicas e <span style="color:var(--forest)">crenças negativas</span> vividas no momento do
+                        físicas e <span style="color:var(--forest);font-weight:500">crenças negativas</span> vividas no momento do
                         acontecimento.</p>
-                    <p>O objetivo do EMDR é ajudar o cérebro a <span style="color:var(--forest)">reprocessar essas
-                            memórias</span>, reduzindo o <span style="color:var(--forest)">sofrimento emocional</span>
+                    <p>O objetivo do EMDR é ajudar o cérebro a <span style="color:var(--forest);font-weight:500">reprocessar essas
+                            memórias</span>, reduzindo o <span style="color:var(--forest);font-weight:500">sofrimento emocional</span>
                         associado e permitindo que a pessoa integre a experiência de forma mais adaptativa.</p>
                     <p>Após o processamento de uma memória traumática, é frequente que a pessoa recorde o acontecimento
-                        sem a <span style="color:var(--forest)">intensidade emocional anterior</span>, desenvolva <span
-                            style="color:var(--forest)">crenças mais adaptativas</span> sobre si mesma, apresente menos
-                        sintomas de ansiedade ou stress e sinta maior <span style="color:var(--forest)">sensação de
+                        sem a <span style="color:var(--forest);font-weight:500">intensidade emocional anterior</span>, desenvolva <span
+                            style="color:var(--forest);font-weight:500">crenças mais adaptativas</span> sobre si mesma, apresente menos
+                        sintomas de ansiedade ou stress e sinta maior <span style="color:var(--forest);font-weight:500">sensação de
                             controlo e segurança</span>.</p>
-                    <p>Importa referir que o EMDR <span style="color:var(--forest)">não apaga memórias</span>. O que
+                    <p>Importa referir que o EMDR <span style="color:var(--forest);font-weight:500">não apaga memórias</span>. O que
                         muda é a forma como essas memórias ficam armazenadas e o <span
-                            style="color:var(--forest)">impacto emocional</span> que exercem na vida da pessoa.</p>
+                            style="color:var(--forest);font-weight:500">impacto emocional</span> que exercem na vida da pessoa.</p>
                 </div>
             </div>
             <div class="sobre-section rv">
@@ -2601,23 +2535,23 @@
                     <h4>Hipnose<br>Clínica</h4>
                 </div>
                 <div class="sobre-section-body">
-                    <p>Para além do EMDR também utilizo <span style="color:var(--forest)">Hipnose Clínica</span> nas
-                        minhas consultas, como uma <span style="color:var(--forest)">ferramenta complementar</span> ao
+                    <p>Para além do EMDR também utilizo <span style="color:var(--forest);font-weight:500">Hipnose Clínica</span> nas
+                        minhas consultas, como uma <span style="color:var(--forest);font-weight:500">ferramenta complementar</span> ao
                         acompanhamento terapêutico, sempre de forma personalizada e adaptada às necessidades de cada
                         pessoa.</p>
-                    <p>A hipnose clínica é um <span style="color:var(--forest)">estado natural de concentração e foco
+                    <p>A hipnose clínica é um <span style="color:var(--forest);font-weight:500">estado natural de concentração e foco
                             profundo</span> que permite aceder a recursos internos, promover mudanças positivas e
-                        trabalhar questões <span style="color:var(--forest)">emocionais, comportamentais ou
+                        trabalhar questões <span style="color:var(--forest);font-weight:500">emocionais, comportamentais ou
                             psicossomáticas</span> de forma mais eficaz. Durante o processo, a pessoa mantém-se <span
-                            style="color:var(--forest)">consciente, com controlo sobre si própria</span> e capaz de
+                            style="color:var(--forest);font-weight:500">consciente, com controlo sobre si própria</span> e capaz de
                         interromper a experiência a qualquer momento.</p>
-                    <p>Esta abordagem é útil no tratamento da <span style="color:var(--forest)">ansiedade, stress,
+                    <p>Esta abordagem é útil no tratamento da <span style="color:var(--forest);font-weight:500">ansiedade, stress,
                             fobias, depressão, traumas</span>, melhoria da autoestima, alteração de hábitos, entre
                         outras questões. O objetivo é facilitar o <span
-                            style="color:var(--forest)">autoconhecimento</span>, reforçar <span
-                            style="color:var(--forest)">competências pessoais</span> e potenciar o <span
-                            style="color:var(--forest)">bem-estar físico e emocional</span>.</p>
-                    <p>A hipnose clínica é utilizada de forma <span style="color:var(--forest)">ética, segura e
+                            style="color:var(--forest);font-weight:500">autoconhecimento</span>, reforçar <span
+                            style="color:var(--forest);font-weight:500">competências pessoais</span> e potenciar o <span
+                            style="color:var(--forest);font-weight:500">bem-estar físico e emocional</span>.</p>
+                    <p>A hipnose clínica é utilizada de forma <span style="color:var(--forest);font-weight:500">ética, segura e
                             integrada</span> num plano terapêutico mais amplo, respeitando sempre os objetivos e o ritmo
                         de cada cliente.</p>
                 </div>
@@ -2695,16 +2629,33 @@
     <section id="consultas-psiafetiva" style="background:var(--cream); scroll-margin-top:7rem;">
         <div class="section-inner">
             <div class="abord-head">
-                <h2 class="rv d1">Como funcionam as consultas na <span style="color:var(--terra)">Psicologia Afetiva</span>?</h2>
+                <h2 class="rv d1">Como funcionam as consultas na <span style="color:var(--terra)">Psicologia
+                        Afetiva</span>?</h2>
             </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
-                <div class="rv" style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
-                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Plano Terapêutico Individualizado</h3>
-                    <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Após a entrevista clínica, estabelece-se um conjunto de objetivos terapêuticos totalmente adaptados ao que a pessoa precisa naquele momento da sua vida. O processo é sempre participativo: a pessoa envolve-se ativamente na compreensão das suas emoções, dos pensamentos que a influenciam e dos comportamentos que resultam desses padrões internos. Esta participação permite que desenvolva consciência, autonomia e capacidade de mudança. No final, o propósito é ampliar a funcionalidade emocional, promover bem-estar psicológico e contribuir para uma melhoria consistente da qualidade de vida.</p>
+            <div class="consultas-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+                <div class="rv"
+                    style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
+                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Plano
+                        Terapêutico Individualizado</h3>
+                    <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Após a entrevista clínica,
+                        estabelece-se um conjunto de objetivos terapêuticos totalmente adaptados ao que a pessoa precisa
+                        naquele momento da sua vida. O processo é sempre participativo: a pessoa envolve-se ativamente
+                        na compreensão das suas emoções, dos pensamentos que a influenciam e dos comportamentos que
+                        resultam desses padrões internos. Esta participação permite que desenvolva consciência,
+                        autonomia e capacidade de mudança.<br><br>No final, o propósito é ampliar a funcionalidade emocional,
+                        promover bem-estar psicológico e contribuir para uma melhoria consistente da qualidade de vida.
+                    </p>
                 </div>
-                <div class="rv d1" style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
-                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Confidencialidade e Sigilo Profissional</h3>
-                    <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Compromisso com o sigilo profissional e proteção dos seus dados pessoais, assegurando confidencialidade. A relação clínica é construída de forma cuidadosa, baseada na confiança, na empatia e no respeito profundo pela individualidade de cada pessoa. Este vínculo cria um ambiente verdadeiramente seguro e acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada, validada e compreendida na sua totalidade.</p>
+                <div class="rv d1"
+                    style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
+                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">
+                        Confidencialidade e Sigilo Profissional</h3>
+                    <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Compromisso com o sigilo
+                        profissional e proteção dos seus dados pessoais, assegurando confidencialidade. A relação
+                        clínica é construída de forma cuidadosa, baseada na confiança, na empatia e no respeito profundo
+                        pela individualidade de cada pessoa.<br><br>Este vínculo cria um ambiente verdadeiramente seguro e
+                        acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada, validada e
+                        compreendida na sua totalidade.</p>
                 </div>
             </div>
         </div>
@@ -2728,101 +2679,145 @@
             <div class="serv-blocks rv">
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Adições Químicas e Comportamentais</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Adições Químicas e Comportamentais</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Ansiedade</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Ansiedade</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Autoconhecimento e Desenvolvimento Pessoal</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Autoconhecimento e Desenvolvimento Pessoal</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Autoestima, Autoconfiança e Poder Pessoal</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Autoestima, Autoconfiança e Poder Pessoal</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Criança Interior</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Criança Interior</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Depressão</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Depressão</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>EMDR</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>EMDR</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Fobias e Ataques de Pânico</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Fobias e Ataques de Pânico</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Hipnose Clínica</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Hipnose Clínica</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Regulação Emocional</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Regulação Emocional</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
                 <div class="serv-block">
                     <div class="serv-block-header">
-                        <div class="serv-block-header-left"><h3>Trauma</h3></div>
+                        <div class="serv-block-header-left">
+                            <h3>Trauma</h3>
+                        </div>
                         <div class="serv-block-tog"></div>
                     </div>
                     <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
             </div>
@@ -2937,16 +2932,27 @@
         <section id="consultas" style="scroll-margin-top:7rem;">
             <div class="section-inner">
                 <div class="abord-head">
-                    <h2 class="rv d1">Como funcionam as consultas na <span style="color:var(--terra)">Psicologia Afetiva</span>?</h2>
+                    <h2 class="rv d1">Como funcionam as consultas na <span style="color:var(--terra)">Psicologia
+                            Afetiva</span>?</h2>
                 </div>
                 <div class="pillars">
                     <div class="pillar rv">
                         <h3>Plano Terapêutico Individualizado</h3>
-                        <p>Após a entrevista clínica, estabelece-se um conjunto de objetivos terapêuticos totalmente adaptados ao que a pessoa precisa naquele momento da sua vida. O processo é sempre participativo: a pessoa envolve-se ativamente na compreensão das suas emoções, dos pensamentos que a influenciam e dos comportamentos que resultam desses padrões internos. Esta participação permite que desenvolva consciência, autonomia e capacidade de mudança. No final, o propósito é ampliar a funcionalidade emocional, promover bem-estar psicológico e contribuir para uma melhoria consistente da qualidade de vida.</p>
+                        <p>Após a entrevista clínica, estabelece-se um conjunto de objetivos terapêuticos totalmente
+                            adaptados ao que a pessoa precisa naquele momento da sua vida. O processo é sempre
+                            participativo: a pessoa envolve-se ativamente na compreensão das suas emoções, dos
+                            pensamentos que a influenciam e dos comportamentos que resultam desses padrões internos.
+                            Esta participação permite que desenvolva consciência, autonomia e capacidade de mudança. No
+                            final, o propósito é ampliar a funcionalidade emocional, promover bem-estar psicológico e
+                            contribuir para uma melhoria consistente da qualidade de vida.</p>
                     </div>
                     <div class="pillar rv d1">
                         <h3>Confidencialidade e Sigilo Profissional</h3>
-                        <p>Compromisso com o sigilo profissional e proteção dos seus dados pessoais, assegurando confidencialidade. A relação clínica é construída de forma cuidadosa, baseada na confiança, na empatia e no respeito profundo pela individualidade de cada pessoa. Este vínculo cria um ambiente verdadeiramente seguro e acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada, validada e compreendida na sua totalidade.</p>
+                        <p>Compromisso com o sigilo profissional e proteção dos seus dados pessoais, assegurando
+                            confidencialidade. A relação clínica é construída de forma cuidadosa, baseada na confiança,
+                            na empatia e no respeito profundo pela individualidade de cada pessoa. Este vínculo cria um
+                            ambiente verdadeiramente seguro e acolhedor, onde não existe julgamento e onde a pessoa se
+                            pode sentir escutada, validada e compreendida na sua totalidade.</p>
                     </div>
                 </div>
             </div>
@@ -2969,8 +2975,8 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">adição</span> pode assumir diferentes
-                                formas e <span style="color:var(--terra);font-weight:500">comportamentos
+                            <p>A <span style="color:var(--terra);font-weight:700">adição</span> pode assumir diferentes
+                                formas e <span style="color:var(--terra);font-weight:700">comportamentos
                                     dependentes</span>.
                                 Pode ser física,
                                 envolvendo o consumo de substâncias que alteram o sistema nervoso e o humor, como o
@@ -2996,7 +3002,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">ansiedade</span> caracteriza-se por
+                            <p>A <span style="color:var(--terra);font-weight:700">ansiedade</span> caracteriza-se por
                                 uma
                                 preocupação excessiva, persistente e difícil de controlar.
                                 Pode manifestar-se através de sintomas físicos (e.g., dores de cabeça, cansaço e
@@ -3021,7 +3027,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>O <span style="color:var(--terra);font-weight:500">autoconhecimento</span> permite
+                            <p>O <span style="color:var(--terra);font-weight:700">autoconhecimento</span> permite
                                 compreender melhor quem somos, o que valorizamos e a forma como
                                 pensamos, sentimos e agimos. Este processo envolve explorar emoções, valores,
                                 necessidades,
@@ -3034,7 +3040,7 @@
                                 em
                                 vez de reagir apenas ao contexto ou às expectativas dos outros.</p>
                             <p>O autoconhecimento é basilar para a construção da <span
-                                    style="color:var(--terra);font-weight:500">inteligência emocional</span>,
+                                    style="color:var(--terra);font-weight:700">inteligência emocional</span>,
                                 constituindo
                                 um
                                 processo contínuo e transformador, essencial para viver em harmonia consigo próprio/a,
@@ -3050,7 +3056,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>O <span style="color:var(--terra);font-weight:500">desenvolvimento pessoal</span> não
+                            <p>O <span style="color:var(--terra);font-weight:700">desenvolvimento pessoal</span> não
                                 consiste em procurar a perfeição, mas sim em trabalhar, ao
                                 ritmo de cada pessoa, na construção de uma versão mais consciente, equilibrada e
                                 funcional
@@ -3073,12 +3079,12 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">autoestima</span> consiste em
+                            <p>A <span style="color:var(--terra);font-weight:700">autoestima</span> consiste em
                                 reconhecer
                                 as próprias qualidades e limitações, aceitando-as com
                                 compaixão e respeito por si próprio/a. Neste processo, construiremos uma relação mais
                                 saudável consigo próprio/a, baseada no respeito, aceitação e compaixão.</p>
-                            <p>A <span style="color:var(--terra);font-weight:500">autoconfiança</span> constrói-se
+                            <p>A <span style="color:var(--terra);font-weight:700">autoconfiança</span> constrói-se
                                 através
                                 da capacidade de reconhecer que os erros e dificuldades
                                 fazem parte do percurso de vida, sem comprometer o nosso valor pessoal.</p>
@@ -3094,7 +3100,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">depressão</span> está frequentemente
+                            <p>A <span style="color:var(--terra);font-weight:700">depressão</span> está frequentemente
                                 associada a um acontecimento precipitante, habitualmente
                                 relacionado com perda. Os sintomas mais predominantes são o humor deprimido ou irritável
                                 e a
@@ -3127,7 +3133,7 @@
                             <p>As emoções fazem parte da experiência humana e não existem emoções "boas" ou "más";
                                 existem
                                 formas mais ou menos ajustadas de lidar com aquilo que sentimos.<br>A <span
-                                    style="color:var(--terra);font-weight:500">gestão emocional</span>
+                                    style="color:var(--terra);font-weight:700">gestão emocional</span>
                                 envolve aprender a reconhecer, compreender e aceitar as próprias emoções, desenvolvendo
                                 formas mais equilibradas de as gerir e expressar.</p>
                             <p>Desta forma, será possível responder com maior consciência, equilíbrio e capacidade de
@@ -3142,7 +3148,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">terapia familiar</span> é uma forma de
+                            <p>A <span style="color:var(--terra);font-weight:700">terapia familiar</span> é uma forma de
                                 psicoterapia que envolve, em simultâneo, vários elementos
                                 da família, com o objetivo de melhorar a comunicação, resolver conflitos ou situações de
                                 crise e fortalecer as relações familiares.</p>
@@ -3159,7 +3165,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">terapia de casal</span> é uma forma de
+                            <p>A <span style="color:var(--terra);font-weight:700">terapia de casal</span> é uma forma de
                                 psicoterapia realizada com duas pessoas que, mantêm uma
                                 relação amorosa, com o objetivo de melhorar a relação, resolver conflitos e fortalecer a
                                 ligação emocional.</p>
@@ -3179,7 +3185,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>O <span style="color:var(--terra);font-weight:500">trauma</span> pode resultar de
+                            <p>O <span style="color:var(--terra);font-weight:700">trauma</span> pode resultar de
                                 diversos
                                 acontecimentos que, ameaçam a vida ou a segurança da
                                 pessoa, de forma direta ou indireta, como agressões, guerra, violação, acidentes graves,
@@ -3201,8 +3207,14 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>O trabalho com a <span style="color:var(--terra);font-weight:500">criança interior</span> consiste em reconhecer e integrar experiências emocionais da infância que continuam a influenciar a forma como sentimos, nos relacionamos e reagimos na vida adulta.</p>
-                            <p>Muitas dificuldades emocionais no presente — como o medo do abandono, a dificuldade em estabelecer limites ou a necessidade de aprovação — têm raízes em padrões aprendidos em fases precoces do desenvolvimento. Ao reconhecer e cuidar dessas partes internas, torna-se possível promover maior equilíbrio emocional, autocompaixão e liberdade interior.</p>
+                            <p>O trabalho com a <span style="color:var(--terra);font-weight:700">criança interior</span>
+                                consiste em reconhecer e integrar experiências emocionais da infância que continuam a
+                                influenciar a forma como sentimos, nos relacionamos e reagimos na vida adulta.</p>
+                            <p>Muitas dificuldades emocionais no presente — como o medo do abandono, a dificuldade em
+                                estabelecer limites ou a necessidade de aprovação — têm raízes em padrões aprendidos em
+                                fases precoces do desenvolvimento. Ao reconhecer e cuidar dessas partes internas,
+                                torna-se possível promover maior equilíbrio emocional, autocompaixão e liberdade
+                                interior.</p>
                         </div>
                     </div>
                     <div class="serv-block">
@@ -3213,8 +3225,14 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>O <span style="color:var(--terra);font-weight:500">EMDR</span> (Dessensibilização e Reprocessamento através dos Movimentos Oculares) é uma abordagem psicoterapêutica amplamente utilizada no tratamento de traumas, ansiedade, fobias e depressão, entre outras dificuldades psicológicas.</p>
-                            <p>Baseia-se na ideia de que algumas experiências difíceis podem ficar "presas" no sistema nervoso sem serem adequadamente processadas. O objetivo é ajudar o cérebro a reprocessar essas memórias, reduzindo o sofrimento emocional e permitindo que a pessoa integre a experiência de forma mais adaptativa.</p>
+                            <p>O <span style="color:var(--terra);font-weight:700">EMDR</span> (Dessensibilização e
+                                Reprocessamento através dos Movimentos Oculares) é uma abordagem psicoterapêutica
+                                amplamente utilizada no tratamento de traumas, ansiedade, fobias e depressão, entre
+                                outras dificuldades psicológicas.</p>
+                            <p>Baseia-se na ideia de que algumas experiências difíceis podem ficar "presas" no sistema
+                                nervoso sem serem adequadamente processadas. O objetivo é ajudar o cérebro a reprocessar
+                                essas memórias, reduzindo o sofrimento emocional e permitindo que a pessoa integre a
+                                experiência de forma mais adaptativa.</p>
                         </div>
                     </div>
                     <div class="serv-block">
@@ -3225,8 +3243,15 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>As <span style="color:var(--terra);font-weight:500">fobias</span> são medos intensos e persistentes face a situações, objetos ou contextos específicos, que provocam evitamento e interferem significativamente na qualidade de vida. Os <span style="color:var(--terra);font-weight:500">ataques de pânico</span> caracterizam-se por episódios súbitos de medo intenso, acompanhados de sintomas físicos como palpitações, falta de ar, tontura e sensação de perda de controlo.</p>
-                            <p>O acompanhamento psicológico permite compreender as origens destes padrões, reduzir a intensidade das respostas de medo e desenvolver estratégias eficazes para retomar uma vida mais plena e sem limitações impostas pelo evitamento.</p>
+                            <p>As <span style="color:var(--terra);font-weight:700">fobias</span> são medos intensos e
+                                persistentes face a situações, objetos ou contextos específicos, que provocam evitamento
+                                e interferem significativamente na qualidade de vida. Os <span
+                                    style="color:var(--terra);font-weight:700">ataques de pânico</span> caracterizam-se
+                                por episódios súbitos de medo intenso, acompanhados de sintomas físicos como
+                                palpitações, falta de ar, tontura e sensação de perda de controlo.</p>
+                            <p>O acompanhamento psicológico permite compreender as origens destes padrões, reduzir a
+                                intensidade das respostas de medo e desenvolver estratégias eficazes para retomar uma
+                                vida mais plena e sem limitações impostas pelo evitamento.</p>
                         </div>
                     </div>
                     <div class="serv-block">
@@ -3237,8 +3262,13 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">hipnose clínica</span> é um estado natural de concentração e foco profundo que permite aceder a recursos internos e promover mudanças positivas a nível emocional, comportamental e psicossomático. Durante o processo, a pessoa mantém-se consciente e com controlo sobre si própria.</p>
-                            <p>É utilizada como ferramenta complementar ao acompanhamento terapêutico, de forma ética, segura e personalizada, sendo especialmente útil no tratamento da ansiedade, stress, fobias, depressão, traumas e na melhoria da autoestima.</p>
+                            <p>A <span style="color:var(--terra);font-weight:700">hipnose clínica</span> é um estado
+                                natural de concentração e foco profundo que permite aceder a recursos internos e
+                                promover mudanças positivas a nível emocional, comportamental e psicossomático. Durante
+                                o processo, a pessoa mantém-se consciente e com controlo sobre si própria.</p>
+                            <p>É utilizada como ferramenta complementar ao acompanhamento terapêutico, de forma ética,
+                                segura e personalizada, sendo especialmente útil no tratamento da ansiedade, stress,
+                                fobias, depressão, traumas e na melhoria da autoestima.</p>
                         </div>
                     </div>
                     <div class="serv-block">
@@ -3249,7 +3279,7 @@
                             <div class="serv-block-tog"></div>
                         </div>
                         <div class="serv-block-body">
-                            <p>A <span style="color:var(--terra);font-weight:500">intervenção em crise</span> consiste
+                            <p>A <span style="color:var(--terra);font-weight:700">intervenção em crise</span> consiste
                                 numa
                                 resposta rápida e de curta duração, destinada a ajudar a
                                 pessoa a lidar com uma situação emocionalmente intensa, na qual o equilíbrio psicológico
@@ -3382,10 +3412,8 @@
                 </div>
                 <div class="form-check">
                     <input type="checkbox" id="rgpd" name="rgpd" required>
-                    <label for="rgpd">Li e aceito a <a href="#" id="privacyLinkForm">Política de Privacidade</a> e
-                        consinto o tratamento dos
-                        meus dados pessoais para efeitos de resposta ao presente contacto, nos termos do
-                        RGPD.</label>
+                    <label for="rgpd">Consinto o tratamento dos meus dados pessoais para efeitos de resposta ao presente
+                        contacto, nos termos do RGPD.</label>
                 </div>
                 <button type="submit" class="btn-send">Vamos conversar</button>
                 <div class="form-success" id="fSuccess">✓ Pedido enviado com sucesso. Responderei em breve!</div>
@@ -3395,215 +3423,23 @@
         </div>
     </section>
 
-    <template>
-        <!-- FOOTER -->
-        <footer>
-            <div class="foot-inner">
-                <div class="foot-logo">Filipa Vilhena <span>Martins</span></div>
-                <div class="foot-social-icons" style="display:flex;gap:.9rem;align-items:center;margin:0 auto 0 11rem;">
-                    <a href="https://www.instagram.com/raizesdoeu.psicologia" target="_blank" rel="noopener"
-                        aria-label="Instagram" class="foot-icon">
-                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" />
-                            <circle cx="12" cy="12" r="4.5" />
-                            <circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none" />
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/351926548572" target="_blank" rel="noopener" aria-label="WhatsApp"
-                        class="foot-icon">
-                        <svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                            <path
-                                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.114 1.522 5.843L.036 23.55a.5.5 0 0 0 .608.625l5.92-1.516A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.9 9.9 0 0 1-5.032-1.373l-.36-.214-3.733.956.991-3.624-.235-.373A9.862 9.862 0 0 1 2.1 12C2.1 6.533 6.533 2.1 12 2.1S21.9 6.533 21.9 12 17.467 21.9 12 21.9z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="foot-links">
-                    <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
-                    <a href="#" id="privacyLink">Política de Privacidade</a>
-                </div>
-            </div>
-            <div class="foot-bottom">
-                <div class="foot-seal">
-                    <img src="pngs/Identificador_psicologa.png" alt="Ordem dos Psicólogos Portugueses">
-                    <a href="Documentos/CertidaoRegisto.pdf" target="_blank" rel="noopener"
-                        aria-label="Ver certidão de registo ERS"><img src="pngs/ERS.png" alt="ERS"></a>
-                </div>
-                <p class="foot-legal">© 2026 Filipa Vilhena Martins — Psicóloga | Raízes do Eu. C.P. 23722 OPP. Todos os
-                    direitos reservados.</p>
-            </div>
-        </footer>
-
-        <!-- MODAL POLÍTICA DE PRIVACIDADE -->
-        <div id="privacyModal"
-            style="display:none;position:fixed;inset:0;z-index:800;background:rgba(28,23,18,.6);backdrop-filter:blur(4px);overflow-y:auto;">
-            <div
-                style="max-width:760px;margin:4rem auto;background:var(--cream);padding:3rem 3.2rem;position:relative;">
-                <button id="privacyClose"
-                    style="position:absolute;top:1.2rem;right:1.4rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--txt3);line-height:1;"
-                    aria-label="Fechar">✕</button>
-                <p
-                    style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem;">
-                    Raízes do Eu</p>
-                <h2
-                    style="font-family:'Cormorant Upright',serif;font-size:2rem;color:var(--forest);font-weight:400;margin-bottom:2rem;">
-                    Política de Privacidade</h2>
-
-                <div
-                    style="font-size:.9rem;color:var(--txt2);line-height:1.85;display:flex;flex-direction:column;gap:1.6rem;">
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            1. Responsável pelo tratamento</h3>
-                        <p><strong>Nome Profissional:</strong> Filipa Vilhena Martins</p>
-                        <p><strong>Morada (Sede/Contacto):</strong> Avenida D. João IV, Centro Comercial Villa Loja
-                            nº58,
-                            4810-534 Guimarães</p>
-                        <p><strong>Email:</strong> <a href="mailto:psicologia@raizesdoeu.pt"
-                                style="color:var(--terra)">psicologia@raizesdoeu.pt</a></p>
-                        <p><strong>Cédula Profissional (OPP):</strong> 23722</p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            2. Dados Pessoais</h3>
-                        <p>Os dados pessoais recolhidos e tratados dependem da relação estabelecida com o titular dos
-                            dados
-                            e da finalidade específica do tratamento.</p>
-                        <p style="margin-top:.8rem;"><strong>2.1 Dados recolhidos no âmbito da prestação de serviços de
-                                psicologia</strong></p>
-                        <p>No contexto da prestação de cuidados de saúde mental poderão ser recolhidos e tratados dados
-                            pessoais como:</p>
-                        <p>— Dados de identificação e contacto: nome, data de nascimento, número de identificação fiscal
-                            (NIF), morada de faturação, endereço de email, contacto telefónico e contacto telefónico de
-                            emergência;</p>
-                        <p>— Dados relativos à saúde (categoria especial de dados pessoais nos termos do artigo 9.º do
-                            RGPD), incluindo, quando necessário para prestação de serviços: motivo da consulta;
-                            historial
-                            clínico; informação recolhida durante as sessões; avaliação psicológica; planos de
-                            intervenção e
-                            acompanhamento.</p>
-                        <p>Os dados relativos à saúde são tratados exclusivamente para efeitos da prestação de cuidados
-                            psicológicos, estando sujeitos ao dever do sigilo profissional e a medidas técnicas
-                            adequadas
-                            para garantir a sua confidencialidade e segurança.</p>
-                        <p style="margin-top:.8rem;"><strong>2.2 Dados recolhidos através do website</strong></p>
-                        <p>O formulário de contacto do website recolhe apenas os dados estritamente necessários para
-                            permitir um primeiro contacto, nomeadamente: nome; endereço de email; contacto telefónico
-                            (opcional); motivo do contacto (Pedido de Informações, Consulta Presencial ou Consulta
-                            Online).
-                        </p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            3. Conservação dos Dados</h3>
-                        <p>Os dados pessoais são conservados apenas durante o período necessário para cumprir as
-                            finalidades
-                            que justificaram a sua recolha e para dar cumprimento às obrigações legais aplicáveis:</p>
-                        <p>— Processos clínicos: conservados durante o período exigido pelas normas legais e
-                            deontológicas
-                            aplicáveis à atividade profissional do psicólogo, atualmente até 10 anos após o último
-                            contacto
-                            clínico.</p>
-                        <p>— Dados de faturação: conservados durante 10 anos, para cumprimento das obrigações fiscais e
-                            contabilísticas.</p>
-                        <p>— Dados de navegação e cookies: conservados por um período máximo de 13 meses, salvo prazo
-                            diferente exigido por lei ou mediante renovação do consentimento do utilizador.</p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            4. Partilha de Dados</h3>
-                        <p>Os dados pessoais não são vendidos, comercializados ou utilizados para fins publicitários.
-                        </p>
-                        <p>Os dados poderão ser partilhados apenas quando estritamente necessário com:</p>
-                        <p style="margin-top:.8rem;"><strong>4.1 Subcontratantes</strong></p>
-                        <p>Entidades que prestam serviços necessários ao funcionamento da atividade, tais como:
-                            alojamento
-                            do website; serviço de email profissional; processamento técnico do formulário de contacto;
-                            software de faturação; plataformas de videoconsulta; outros prestadores tecnológicos
-                            necessários
-                            à prestação dos serviços.</p>
-                        <p>Estas entidades atuam mediante instruções do responsável pelo tratamento e encontram-se
-                            sujeitas
-                            a obrigações adequadas de confidencialidade e proteção de dados.</p>
-                        <p>O formulário de contacto do website utiliza o serviço <strong>Web3Forms</strong>, operado
-                            pela
-                            Web3Creative, que atua como subcontratante para receção, processamento técnico e
-                            encaminhamento
-                            dos pedidos submetidos através do formulário.</p>
-                        <p style="margin-top:.8rem;"><strong>4.2 Autoridades Competentes:</strong> Quando tal seja
-                            exigido
-                            por lei ou por decisão da autoridade judicial ou administrativa competente.</p>
-                        <p style="margin-top:.8rem;"><strong>4.3 Proteção de interesses vitais:</strong> Em situações
-                            excecionais de risco grave e iminente para a vida ou integridade física do titular dos dados
-                            ou
-                            de terceiros, nos termos da legislação aplicável e dos deveres deontológicos.</p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            5. Segurança dos Dados</h3>
-                        <p>São implementadas medidas técnicas adequadas (como encriptação SSL/TLS e controlo de acessos)
-                            para proteger os dados pessoais contra acesso não autorizado, perda ou divulgação.</p>
-                        <p>Tratando-se de consultas online, as plataformas utilizadas garantem a segurança na
-                            transmissão da
-                            informação.</p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            6. Direitos do Titular</h3>
-                        <p>O titular pode exercer, a qualquer momento, os seguintes direitos:</p>
-                        <p>— Acesso, Retificação e Apagamento (salvo obrigações legais de arquivo clínico);</p>
-                        <p>— Portabilidade e Limitação do tratamento;</p>
-                        <p>— Retirar o consentimento a qualquer momento;</p>
-                        <p>— Apresentar reclamação à autoridade de controlo.</p>
-                        <p style="margin-top:.6rem;">Para exercer estes direitos, deve enviar um e-mail para: <a
-                                href="mailto:psicologia@raizesdoeu.pt"
-                                style="color:var(--terra)">psicologia@raizesdoeu.pt</a>. O pedido será respondido no
-                            prazo
-                            máximo de 30 dias.</p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            7. Cookies</h3>
-                        <p>O website utiliza cookies e tecnologias semelhantes para assegurar o seu funcionamento,
-                            melhorar
-                            a experiência do utilizador e garantir a segurança da plataforma.</p>
-                        <p>Quando aplicável, determinados cookies poderão depender do consentimento do utilizador,
-                            podendo
-                            este gerir ou retirar as suas preferências através das definições disponíveis no website ou
-                            no
-                            próprio navegador.</p>
-                    </div>
-                    <div>
-                        <h3
-                            style="font-family:'Cormorant Upright',serif;font-size:1.2rem;color:var(--forest);font-weight:400;margin-bottom:.5rem;">
-                            8. Autoridade de Controlo</h3>
-                        <p>Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt" target="_blank"
-                                rel="noopener" style="color:var(--terra)">www.cnpd.pt</a>)</p>
-                    </div>
-                    <p style="font-size:.78rem;color:var(--txt3);border-top:1px solid var(--border);padding-top:1rem;">
-                        Última atualização: julho de 2026</p>
-                </div>
+    <footer>
+        <div class="foot-inner">
+            <div class="foot-logo">Cátia <span>Raposo</span></div>
+            <div class="foot-links">
+                <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
             </div>
         </div>
-
-        <!-- COOKIE BANNER -->
-        <div id="cookieBanner" style="display:none">
-            <p>Este site utiliza cookies para análise anónima de visitas, com o objetivo de melhorar a experiência dos
-                utilizadores. Pode aceitar ou recusar o uso de cookies não essenciais.</p>
-            <div class="cookie-btns">
-                <button id="cookieAccept">Aceitar Cookies</button>
-                <button id="cookieReject">Apenas Essenciais</button>
+        <div class="foot-bottom">
+            <div class="foot-seal">
+                <img src="ordem_catia.png" alt="Ordem dos Psicólogos Portugueses">
+                <img src="pngs/ERS.png" alt="ERS">
             </div>
+            <p class="foot-legal">© 2026 Cátia Raposo | Psicologia Afetiva. C.P. 26955 OPP. Todos os direitos
+                reservados.</p>
         </div>
-    </template>
+    </footer>
+
 
     <!-- LIGHTBOX -->
     <div id="arteLightbox">
@@ -3713,7 +3549,7 @@
         document.querySelectorAll('.serv-block').forEach(block => {
             block.addEventListener('click', () => {
                 const wasOpen = block.classList.contains('open');
-                document.querySelectorAll('.serv-block').forEach(b => b.classList.remove('open'));
+                docreument.querySelectorAll('.serv-block').forEach(b => b.classList.remove('open'));
                 if (!wasOpen) block.classList.add('open');
             });
         });
@@ -3746,8 +3582,10 @@
         function toggleExp() {
             const body = document.getElementById('expBody');
             const btn = document.getElementById('expToggle');
+            const fade = body.parentElement.querySelector('.exp-fade');
             const collapsed = body.classList.toggle('collapsed');
             btn.textContent = collapsed ? 'Ver mais' : 'Ver menos';
+            if (fade) fade.classList.toggle('expanded', !collapsed);
             if (collapsed) {
                 setTimeout(() => {
                     const top = body.closest('.sobre-section').getBoundingClientRect().top + window.scrollY - 160;
@@ -3762,14 +3600,6 @@
         });
 
         // Política de Privacidade modal
-        const privacyModal = document.getElementById('privacyModal');
-        function openPrivacy(e) { e.preventDefault(); privacyModal.style.display = 'block'; document.body.style.overflow = 'hidden'; }
-        function closePrivacy() { privacyModal.style.display = 'none'; document.body.style.overflow = ''; }
-        document.getElementById('privacyLink').addEventListener('click', openPrivacy);
-        document.getElementById('privacyLinkForm').addEventListener('click', openPrivacy);
-        document.getElementById('privacyClose').addEventListener('click', closePrivacy);
-        privacyModal.addEventListener('click', e => { if (e.target === privacyModal) closePrivacy(); });
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closePrivacy(); });
 
         // Google Analytics loader
         function loadAnalytics() {
@@ -3778,30 +3608,65 @@
             s.async = true;
             document.head.appendChild(s);
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() { dataLayer.push(argumennats); }
             gtag('js', new Date());
             gtag('config', 'G-XXXXXXXXXX');
         }
 
-        // Cookie consent logic
-        let consent = null;
-        try { consent = localStorage.getItem('cookie_consent'); } catch (e) { }
+    </script>
 
-        if (consent === 'accepted') {
-            loadAnalytics();
-        } else if (!consent) {
-            document.getElementById('cookieBanner').style.display = 'flex';
+    <a id="wppFloat" href="https://wa.me/351968814846" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.114 1.522 5.843L.036 23.55a.5.5 0 0 0 .608.625l5.92-1.516A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.9 9.9 0 0 1-5.032-1.373l-.36-.214-3.733.956.991-3.624-.235-.373A9.862 9.862 0 0 1 2.1 12C2.1 6.533 6.533 2.1 12 2.1S21.9 6.533 21.9 12 17.467 21.9 12 21.9z" />
+        </svg>
+    </a>
+
+    <style>
+        #wppFloat {
+            position: fixed;
+            bottom: 1.8rem;
+            right: 1.8rem;
+            width: 54px;
+            height: 54px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s, transform .3s;
+            transform: translateY(10px);
+            z-index: 600;
         }
 
-        document.getElementById('cookieAccept').addEventListener('click', () => {
-            try { localStorage.setItem('cookie_consent', 'accepted'); } catch (e) { }
-            document.getElementById('cookieBanner').style.display = 'none';
-            loadAnalytics();
-        });
+        #wppFloat.wpp-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
 
-        document.getElementById('cookieReject').addEventListener('click', () => {
-            try { localStorage.setItem('cookie_consent', 'rejected'); } catch (e) { }
-            document.getElementById('cookieBanner').style.display = 'none';
+        #wppFloat:hover {
+            background: #1ebe5d;
+        }
+    </style>
+
+    <script>
+        const wppBtn = document.getElementById('wppFloat');
+        window.addEventListener('scroll', () => {
+            wppBtn.classList.toggle('wpp-visible', window.scrollY > 200);
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                wppBtn.classList.remove('wpp-visible');
+                setTimeout(() => {
+                    wppBtn.classList.toggle('wpp-visible', window.scrollY > 200);
+                }, 800);
+            });
         });
     </script>
 

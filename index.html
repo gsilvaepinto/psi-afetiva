@@ -734,11 +734,13 @@
             max-height: 0;
         }
 
-        #acadBody.collapsed {
+        #acadBody.collapsed,
+        #expBody.collapsed {
             max-height: 200px;
         }
 
-        #acadBody.collapsed::after {
+        #acadBody.collapsed::after,
+        #expBody.collapsed::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -1968,26 +1970,17 @@
             .foot-seal {
                 justify-content: center;
                 align-items: center;
-                transform: translateX(-1rem);
-            }
-
-            .foot-seal>img,
-            .foot-seal>a {
-                height: 90px;
-                align-self: center;
+                gap: 1.5rem;
+                flex-wrap: wrap;
             }
 
             .foot-seal img {
-                height: 90px;
+                height: 70px;
+                width: auto;
             }
 
             .foot-seal>img {
-                height: 108px;
-                transform: translateX(1.5rem);
-            }
-
-            .foot-seal>a {
-                transform: translateX(-1.5rem);
+                height: 80px;
             }
 
             .foot-legal {
@@ -3582,14 +3575,11 @@
         function toggleExp() {
             const body = document.getElementById('expBody');
             const btn = document.getElementById('expToggle');
-            const fade = body.parentElement.querySelector('.exp-fade');
             const collapsed = body.classList.toggle('collapsed');
             btn.textContent = collapsed ? 'Ver mais' : 'Ver menos';
-            if (fade) fade.classList.toggle('expanded', !collapsed);
             if (collapsed) {
                 setTimeout(() => {
-                    const top = body.closest('.sobre-section').getBoundingClientRect().top + window.scrollY - 160;
-                    window.scrollTo({ top, behavior: 'smooth' });
+                    body.closest('.sobre-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }, 100);
             }
         }

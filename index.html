@@ -3549,7 +3549,7 @@
         document.querySelectorAll('.serv-block').forEach(block => {
             block.addEventListener('click', () => {
                 const wasOpen = block.classList.contains('open');
-                docreument.querySelectorAll('.serv-block').forEach(b => b.classList.remove('open'));
+                document.querySelectorAll('.serv-block').forEach(b => b.classList.remove('open'));
                 if (!wasOpen) block.classList.add('open');
             });
         });

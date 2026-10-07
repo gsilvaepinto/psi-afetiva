@@ -1767,6 +1767,46 @@
             transition-delay: .4s;
         }
 
+        .areas-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+
+        .areas-list li {
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+            font-family: 'Cormorant Upright', serif;
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--txt);
+            font-weight: 400;
+        }
+
+        .serv-block-no-expand {
+            cursor: default !important;
+            pointer-events: none;
+        }
+
+        .serv-block-no-expand::before {
+            display: none;
+        }
+
+        .areas-list li:nth-child(odd) {
+            padding-right: 2rem;
+            border-right: 1px solid var(--border);
+        }
+
+        .areas-list li:nth-child(even) {
+            padding-left: 2rem;
+        }
+
+        .areas-list li:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .consultas-grid {
@@ -1776,6 +1816,27 @@
 
             .marcar-btn-wrap {
                 margin-top: 2rem !important;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-list li:nth-child(odd) {
+                padding-right: 0;
+                border-right: none;
+            }
+
+            .areas-list li:nth-child(even) {
+                padding-left: 0;
+            }
+
+            .areas-list li:last-child {
+                border-bottom: none;
+            }
+
+            .areas-list li:nth-last-child(-n+2) {
+                border-bottom: 1px solid var(--border);
             }
         }
 
@@ -2705,149 +2766,17 @@
                 </div>
             </div>
             <div class="serv-blocks rv">
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Adições Químicas e Comportamentais</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Ansiedade</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Autoconhecimento e Desenvolvimento Pessoal</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Autoestima, Autoconfiança e Poder Pessoal</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Criança Interior</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Depressão</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>EMDR</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Fobias e Ataques de Pânico</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Hipnose Clínica</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Regulação Emocional</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="serv-block">
-                    <div class="serv-block-header">
-                        <div class="serv-block-header-left">
-                            <h3>Trauma</h3>
-                        </div>
-                        <div class="serv-block-tog"></div>
-                    </div>
-                    <div class="serv-block-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Adições Químicas e Comportamentais</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Ansiedade</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Autoconhecimento e Desenvolvimento Pessoal</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Autoestima, Autoconfiança e Poder Pessoal</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Criança Interior</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Depressão</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>EMDR</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Fobias e Ataques de Pânico</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Hipnose Clínica</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Regulação Emocional</h3></div></div></div>
+                <div class="serv-block serv-block-no-expand"><div class="serv-block-header"><div class="serv-block-header-left"><h3>Trauma</h3></div></div></div>
             </div>
         </div>
     </section>

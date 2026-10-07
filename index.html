@@ -740,6 +740,12 @@
             max-height: 200px;
         }
 
+        @media (max-width: 768px) {
+            #expBody.collapsed {
+                max-height: 80px;
+            }
+        }
+
         #acadBody.collapsed::after,
         #expBody.collapsed::after {
             content: '';

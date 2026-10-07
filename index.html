@@ -735,7 +735,10 @@
             max-height: 0;
         }
 
-        #acadBody.collapsed,
+        #acadBody.collapsed {
+            max-height: 350px;
+        }
+
         #expBody.collapsed {
             max-height: 200px;
         }
@@ -743,6 +746,9 @@
         @media (max-width: 768px) {
             #expBody.collapsed {
                 max-height: 40px;
+            }
+            #acadBody.collapsed {
+                max-height: 250px;
             }
         }
 

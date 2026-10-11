@@ -25,7 +25,7 @@
     <meta property="og:title" content="Cátia Raposo | Psicologia Afetiva | Caldas da Rainha">
     <meta property="og:description"
         content="Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, regulação emocional e trauma. Cátia Raposo, C.P. 26955.">
-    <meta property="og:image" content="fotografia_catia.jpg">
+    <meta property="og:image" content="catia_foto.jpeg">
     <meta property="og:image:alt" content="Cátia Raposo — Psicóloga nas Caldas da Rainha">
 
     <!-- Twitter Card -->
@@ -33,7 +33,7 @@
     <meta name="twitter:title" content="Cátia Raposo | Psicologia Afetiva | Caldas da Rainha">
     <meta name="twitter:description"
         content="Acompanhamento psicológico online e presencial nas Caldas da Rainha. EMDR, hipnose clínica, regulação emocional e trauma. Cátia Raposo, C.P. 26955.">
-    <meta name="twitter:image" content="fotografia_catia.jpg">
+    <meta name="twitter:image" content="catia_foto.jpeg">
     <meta name="twitter:image:alt" content="Cátia Raposo — Psicóloga nas Caldas da Rainha">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -585,12 +585,12 @@
 
         .quote-txt {
             font-family: 'Cormorant Upright', serif;
-            font-size: clamp(1.5rem, 3.3vw, 2.7rem);
+            font-size: clamp(1.8rem, 4.2vw, 3.4rem);
             font-weight: 300;
             font-style: italic;
             line-height: 1.45;
             color: var(--cream);
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto 1.2rem;
             text-wrap: balance;
         }
@@ -1110,6 +1110,7 @@
             display: flex;
             align-items: stretch;
             margin-top: 1.5rem;
+            gap: 2.8rem;
         }
 
         .pf-step {
@@ -1135,11 +1136,6 @@
             color: var(--forest);
             z-index: 10;
             line-height: 1;
-        }
-
-        .process-flow {
-            gap: 1.8rem;
-            align-items: stretch;
         }
 
         .pf-step:nth-child(1) {
@@ -1172,7 +1168,7 @@
 
         .pf-step h3 {
             font-family: 'Cormorant Upright', serif;
-            font-size: 1.15rem;
+            font-size: 1.45rem;
             font-weight: 500;
             color: var(--terra);
             margin-bottom: .5rem;
@@ -1180,7 +1176,7 @@
         }
 
         .pf-step p {
-            font-size: .78rem;
+            font-size: .85rem;
             line-height: 1.72;
             color: var(--txt2);
             margin: 0;
@@ -1873,6 +1869,58 @@
             }
         }
 
+        @media (min-width: 769px) and (max-width: 1024px) {
+
+            /* Nav */
+            .nav-links { gap: 1.1rem; }
+            .nav-links a { font-size: .65rem; }
+            .nav-cta { padding: .55rem 1rem; font-size: .65rem; }
+
+            /* Hero */
+            #inicio { grid-template-columns: 1fr; padding: 11rem 6% 3rem; }
+            .hero-visual { width: 65%; height: 400px; max-height: 400px; margin-top: 2rem; margin-left: auto; margin-right: auto; transform: none; }
+            .hero-img-wrap { width: 100%; height: 400px; min-height: unset; max-height: 400px; }
+            .hero-img-frame { width: 100%; height: 100%; aspect-ratio: unset; border-radius: 0; }
+
+            /* Sobre */
+            .sobre-section { grid-template-columns: 140px 1fr; gap: 1.8rem; }
+
+            /* Process flow */
+            .process-flow { flex-direction: column; gap: 1.2rem; }
+            .pf-step:not(:last-child) { padding-bottom: 2rem; }
+            .pf-step:not(:last-child)::after { content: '↓'; right: auto; bottom: -14px; left: 50%; top: auto; transform: translateX(-50%); font-size: 1rem; color: var(--terra); }
+
+            /* Consultas */
+            .consultas-grid { grid-template-columns: 1fr !important; }
+
+            /* Arte/Dança grids */
+            .arte-intro-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+            .arte-intro-grid .hero-img-wrap { transform: none !important; max-width: 65% !important; height: 360px; min-height: unset; margin: 0 auto !important; }
+            .arte-intro-grid .hero-img-frame { height: 360px; aspect-ratio: unset; }
+
+            /* Arte gallery */
+            .arte-gallery { grid-template-columns: 1fr; gap: 1.5rem; }
+            .arte-controls { flex-direction: row; justify-content: center; gap: 1.5rem; }
+            .arte-counter { writing-mode: horizontal-tb; }
+            .arte-btns { flex-direction: row; }
+            .arte-dots { flex-direction: row; }
+
+            /* Contacto */
+            .cont-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+            /* FAQ */
+            .faq-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+            /* Steps */
+            .steps { grid-template-columns: repeat(2, 1fr); }
+
+            /* Footer */
+            .foot-inner { flex-direction: column; gap: 1rem; }
+            .foot-bottom { flex-direction: column; align-items: center; }
+            .foot-seal img { height: 90px; }
+            .foot-seal > img { height: 110px; }
+        }
+
         @media (max-width: 1150px) {
             #inicio {
                 grid-template-columns: 1.1fr 0.9fr;
@@ -2459,7 +2507,7 @@
         <div class="hero-visual">
             <div class="hero-img-wrap">
                 <div class="hero-img-frame">
-                    <img src="fotografia_catia.jpg" alt="Cátia Raposo — Psicóloga">
+                    <img src="catia_foto.jpeg" alt="Cátia Raposo — Psicóloga">
                 </div>
             </div>
         </div>
@@ -2553,8 +2601,7 @@
                                     individualidade de cada pessoa.</p>
                                 <p>Mantenho-me na Wecareon e na WOW facilitando consultas online a particulares e
                                     empresas. Trabalho na Fábrica Bordallo Pinheiro com consultas presenciais.</p>
-                                <p>Atualmente realizo acompanhamento psicológico a particulares online e presencialmente
-                                    nas Caldas da Rainha.</p>
+                                <p>Atualmente realizo acompanhamento psicológico a particulares online e presencialmente nas Caldas da Rainha.</p>
                             </div>
                             <div style="text-align:center;"><button class="exp-toggle" id="expToggle"
                                     onclick="toggleExp()">Ver mais</button></div>
@@ -2728,7 +2775,7 @@
             <div class="consultas-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
                 <div class="rv"
                     style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
-                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Plano
+                    <h3 style="font-size:1.45rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">Plano
                         Terapêutico Individualizado</h3>
                     <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Após a entrevista clínica,
                         estabelece-se um conjunto de objetivos terapêuticos totalmente adaptados ao que a pessoa precisa
@@ -2742,15 +2789,15 @@
                 </div>
                 <div class="rv d1"
                     style="background:var(--cream2); padding:2.2rem 2.4rem; border-top:3px solid var(--forest); border-radius:8px;">
-                    <h3 style="font-size:1.1rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">
+                    <h3 style="font-size:1.45rem; color:var(--forest); font-weight:500; margin-bottom:1rem;">
                         Confidencialidade e Sigilo Profissional</h3>
                     <p style="font-size:.88rem; color:var(--txt2); line-height:1.8;">Compromisso com o sigilo
                         profissional e proteção dos seus dados pessoais, assegurando confidencialidade. A relação
                         clínica é construída de forma cuidadosa, baseada na confiança, na empatia e no respeito profundo
                         pela individualidade de cada pessoa.<br><br>Este vínculo cria um ambiente verdadeiramente seguro
                         e
-                        acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada, validada e
-                        compreendida na sua totalidade.</p>
+                        acolhedor, onde não existe julgamento e onde a pessoa se pode sentir escutada/o, validada/o e
+                        compreendida/o na sua totalidade.</p>
                 </div>
             </div>
         </div>
@@ -2915,7 +2962,7 @@
                             confidencialidade. A relação clínica é construída de forma cuidadosa, baseada na confiança,
                             na empatia e no respeito profundo pela individualidade de cada pessoa. Este vínculo cria um
                             ambiente verdadeiramente seguro e acolhedor, onde não existe julgamento e onde a pessoa se
-                            pode sentir escutada, validada e compreendida na sua totalidade.</p>
+                            pode sentir escutada/o, validada/o e compreendida/o na sua totalidade.</p>
                     </div>
                 </div>
             </div>
@@ -3318,10 +3365,9 @@
     <section id="contacto">
         <div class="section-inner cont-grid">
             <div class="cont-info">
-                <h2 class="rv d1">Lorem ipsum dolor?</h2>
-                <p class="rv d2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.</p>
+                <h2 class="rv d1">Vamos conversar?</h2>
+                <p class="rv d2">Cuidar de si é a melhor decisão que pode tomar hoje. Se sente que está na hora de dar à sua saúde mental a atenção que merece, estou aqui para acompanhar o seu caminho.</p>
+                <p class="rv d2" style="margin-top:1rem;">Pode agendar a sua consulta individual diretamente comigo. Se tiver interesse nas aulas de dança expressiva ou no grupo terapêutico, envie-me um e-mail para mais informações.</p>
                 <div class="c-details rv d3">
                     <div class="c-item">
                         <div class="c-icon">
@@ -3331,25 +3377,34 @@
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
                         </div>
-                        <div class="c-text"><strong>Localização</strong>Lorem ipsum, Caldas da Rainha</div>
+                        <div class="c-text"><strong>Localização</strong><strong style="font-size:.88rem; letter-spacing:0; text-transform:none; color:var(--forest);">Caldas da Rainha</strong></div>
                     </div>
                     <div class="c-item">
                         <div class="c-icon">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
                         </div>
-                        <div class="c-text"><strong>Telefone</strong>+351 968 814 846</div>
+                        <div class="c-text"><strong>Telefone</strong><strong style="font-size:.88rem; letter-spacing:0; text-transform:none; color:var(--forest);">+351 938 602 992</strong></div>
                     </div>
                     <div class="c-item">
                         <div class="c-icon" style="font-size:1.4rem">@</div>
-                        <div class="c-text"><strong>E-mail</strong>lorem@ipsum.pt</div>
+                        <div class="c-text"><strong>E-mail</strong><strong style="font-size:.88rem; letter-spacing:0; text-transform:none; color:var(--forest);">thelovemyselfproject@hotmail.com</strong></div>
                     </div>
                     <div class="c-item">
-                        <div class="c-icon" style="font-size:1.4rem">◷</div>
-                        <div class="c-text"><strong>Horários</strong>Atendimento por marcação</div>
+                        <div class="c-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                            </svg>
+                        </div>
+                        <div class="c-text">
+                            <strong>Instagram</strong>
+                            <a href="https://instagram.com/thelovemyselfproject" target="_blank" style="color:var(--forest); text-decoration:none; display:block; font-weight:500;">@thelovemyselfproject</a>
+                            <a href="https://instagram.com/apsicologiaafetiva" target="_blank" style="color:var(--forest); text-decoration:none; display:block; font-weight:500;">@apsicologiaafetiva</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3372,6 +3427,10 @@
                             <option>Pedido de informações</option>
                         </select>
                     </div>
+                </div>
+                <div class="fg">
+                    <label for="mensagem">Mensagem (opcional)</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui a sua mensagem..."></textarea>
                 </div>
                 <div class="form-check">
                     <input type="checkbox" id="rgpd" name="rgpd" required>
@@ -3398,8 +3457,7 @@
                 <img src="ordem_catia.png" alt="Ordem dos Psicólogos Portugueses">
                 <img src="pngs/ERS.png" alt="ERS">
             </div>
-            <p class="foot-legal">© 2026 Cátia Raposo | Psicologia Afetiva. C.P. 26955 OPP. Todos os direitos
-                reservados.</p>
+            <p class="foot-legal">© 2026 Cátia Raposo | Psicologia Afetiva. C.P. 26955 OPP.<br>Associação EMDR nº 431. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -3575,7 +3633,7 @@
 
     </script>
 
-    <a id="wppFloat" href="https://wa.me/351968814846" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <a id="wppFloat" href="https://wa.me/351938602992" target="_blank" rel="noopener" aria-label="WhatsApp">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -3629,6 +3687,7 @@
             });
         });
     </script>
+
 
 </body>
 

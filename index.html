@@ -363,8 +363,8 @@
                 display: grid;
                 grid-template-columns: 1.3fr 0.7fr;
                 align-items: center;
-                padding: 14rem 5% 4rem;
-                gap: 3rem;
+                padding: 14rem 9% 4rem;
+                gap: 2rem;
                 position: relative;
                 overflow: hidden;
             }
@@ -1689,9 +1689,10 @@
             .form-success {
                 display: none;
                 padding: .9rem 1rem;
-                background: var(--terra2);
-                color: var(--txt);
+                background: var(--forest);
+                color: var(--cream);
                 font-size: .85rem;
+                border-radius: 4px;
             }
 
             .form-error {
@@ -2333,7 +2334,22 @@
                 }
             }
 
-            /* ── RESPONSIVE EXTRAS ── */
+            /* ── LARGE SCREENS ≥ 1600px ── */
+        @media (min-width: 1600px) {
+            #inicio {
+                padding-left: 11%;
+                padding-right: 11%;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            #inicio {
+                padding-left: 14%;
+                padding-right: 14%;
+            }
+        }
+
+        /* ── RESPONSIVE EXTRAS ── */
 
             /* ── MOBILE ≤ 480px ── */
             @media (max-width: 480px) {
@@ -3546,6 +3562,10 @@
                 </div>
             </div>
             <form class="cont-form rv" id="contForm" novalidate>
+                <input type="hidden" name="access_key" value="952fa707-54a8-4371-bd74-14068d6c08f3">
+                <input type="hidden" name="subject" value="Novo contacto — Psicologia Afetiva">
+                <input type="hidden" name="from_name" value="Website Cátia Raposo">
+                <input type="checkbox" name="botcheck" style="display:none">
                 <div class="form-row">
                     <div class="fg"><label for="nome">Nome</label><input type="text" id="nome" name="nome"
                             placeholder="O seu nome" required></div>
@@ -3828,9 +3848,45 @@
             if (sel && !sel.value) sel.value = 'Pedido de informações';
         }
 
-        // Form submit
-        document.getElementById('contForm').addEventListener('submit', e => {
+        // Form submit — Web3Forms
+        document.getElementById('contForm').addEventListener('submit', async e => {
             e.preventDefault();
+            const form = e.target;
+            const rgpd = form.querySelector('#rgpd');
+            const fSuccess = document.getElementById('fSuccess');
+            const fError = document.getElementById('fError');
+            const btn = form.querySelector('.btn-send');
+
+            if (!rgpd.checked) {
+                fError.style.display = 'block';
+                fSuccess.style.display = 'none';
+                return;
+            }
+
+            fError.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'A enviar…';
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(new FormData(form)))
+                });
+                const data = await res.json();
+                if (data.success) {
+                    fSuccess.style.display = 'block';
+                    form.reset();
+                } else {
+                    throw new Error(data.message);
+                }
+            } catch {
+                fError.textContent = '✕ Erro ao enviar. Tente novamente ou contacte por WhatsApp.';
+                fError.style.display = 'block';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Vamos conversar';
+            }
         });
 
         // Política de Privacidade modal
